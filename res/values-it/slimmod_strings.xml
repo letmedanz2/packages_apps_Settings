@@ -38,6 +38,7 @@
 
 
     <!-- Quick settings -->
+    <string name="tiles_configuration">Configurazione delle tiles</string>
     <string name="qs_order_title">Seleziona e ordina tiles</string>
     <string name="add_qs">Aggiungi tile</string>
     <string name="cast_screen">Trasmetti schermo</string>
@@ -49,5 +50,8 @@
     <string name="qs_main_tiles_title">Espandi prima riga</string>
     <string name="qs_main_tiles_summary_on">Due tiles importanti nella prima riga</string>
     <string name="qs_main_tiles_summary_off">Tre tiles per riga</string>
+    <!-- Advanced location tile -->
+    <string name="qs_advanced_location_title">Tile localizzazione avanzata</string>
+    <string name="qs_advanced_location_summary">Permette di configurare la localizzazione direttamente tramite l\'apposita tile</string>
 
 </resources>

@@ -45,7 +45,8 @@
     <!-- V4A -->
     <string name="equalizer_settings_title">Viper4A</string>
 
-    <!-- Quick settings -->
+    <!-- Quick settings tiles customization -->
+    <string name="tiles_configuration">Tiles Configuration</string>
     <string name="qs_order_title">Select and order tiles</string>
     <string name="add_qs">Add new tile</string>
     <string name="cast_screen">Cast screen</string>
@@ -57,5 +58,8 @@
     <string name="qs_main_tiles_title">Enlarge first row</string>
     <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>
     <string name="qs_main_tiles_summary_off">Three tiles on each row</string>
+    <!-- Advanced location tile -->
+    <string name="qs_advanced_location_title">Advanced location quick settings</string>
+    <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
 
 </resources>
