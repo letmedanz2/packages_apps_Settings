@@ -56,10 +56,6 @@
     <!-- Settings main menu category heading. System (Updates, data, accessibility, about phone). [CHAR LIMIT=40] -->
     <string name="header_category_system">System</string>
 
-    <!-- twisted-->
-    <string name="string/header_category_Audio">Audio</string>
-    <string name="string/header_category_Misc">Misc Tweaks</string>
-
     <!-- Phone info -->
     <!-- Phone Info screen. Button label to turn on the radio . Only shown in diagnostic screen, so precise translation is not needed. -->
     <string name="turn_on_radio">Turn on radio</string>
