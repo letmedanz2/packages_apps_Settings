@@ -17,9 +17,12 @@ package com.android.settings.cyanogenmod.qs;
 
 import android.content.Context;
 
+import android.text.TextUtils;
 import com.android.internal.util.cm.QSConstants;
 import com.android.internal.util.cm.QSUtils;
 import com.android.settings.R;
+
+import java.util.Arrays;
 
 /**
  * This class holds the icon, the name - or the string the user sees,
@@ -47,60 +50,87 @@ public class QSTileHolder {
             return null;
         }
 
+        // We need to filter out the LTE tile manually, because
+        // filtering via getAvailableTiles during fwb init
+        // disallows reading our system prop
+        // Hide the tile if device doesn't support LTE
+        // or it supports Dual Sim Dual Active.
+        // TODO: Should be spawning off a tile per sim
+        if (TextUtils.equals(QSConstants.TILE_LTE, tileType)
+                && !QSUtils.deviceSupportsLte(context)) {
+            return null;
+        }
+
         switch (tileType) {
             case TILE_ADD_DELETE:
                 break;
             case QSConstants.TILE_WIFI:
                 resourceName = "ic_qs_wifi_full_4";
-                stringId = R.string.wifi_quick_toggle_title;
+                stringId = R.string.qs_tile_wifi;
                 break;
             case QSConstants.TILE_BLUETOOTH:
                 resourceName = "ic_qs_bluetooth_on";
-                stringId = R.string.bluetooth_settings_title;
+                stringId = R.string.qs_tile_bluetooth;
                 break;
             case QSConstants.TILE_INVERSION:
                 resourceName = "ic_qs_inversion_on";
-                stringId = R.string.accessibility_display_inversion_preference_title;
+                stringId = R.string.qs_tile_display_inversion;
                 break;
             case QSConstants.TILE_CELLULAR:
                 resourceName = "ic_qs_signal_full_4";
-                stringId = R.string.cellular_data_title;
+                stringId = R.string.qs_tile_cellular_data;
                 break;
             case QSConstants.TILE_AIRPLANE:
                 resourceName = "ic_qs_airplane_on";
-                stringId = R.string.airplane_mode;
+                stringId = R.string.qs_tile_airplane_mode;
                 break;
             case QSConstants.TILE_ROTATION:
                 resourceName = "ic_qs_rotation_unlocked";
-                stringId = R.string.display_rotation_title;
+                stringId = R.string.qs_tile_display_rotation;
                 break;
             case QSConstants.TILE_FLASHLIGHT:
                 resourceName = "ic_qs_flashlight_on";
-                stringId = R.string.power_flashlight;
+                stringId = R.string.qs_tile_flashlight;
                 break;
             case QSConstants.TILE_LOCATION:
                 resourceName = "ic_qs_location_on";
-                stringId = R.string.location_title;
+                stringId = R.string.qs_tile_location;
                 break;
             case QSConstants.TILE_CAST:
                 resourceName = "ic_qs_cast_on";
-                stringId = R.string.cast_screen;
+                stringId = R.string.qs_tile_cast_screen;
                 break;
             case QSConstants.TILE_HOTSPOT:
                 resourceName = "ic_qs_hotspot_on";
-                stringId = R.string.hotspot;
+                stringId = R.string.qs_tile_hotspot;
                 break;
             case QSConstants.TILE_NOTIFICATIONS:
                 resourceName = "ic_qs_ringer_audible";
-                stringId = R.string.notifications;
+                stringId = R.string.qs_tile_notifications;
                 break;
             case QSConstants.TILE_NFC:
                 resourceName = "ic_qs_nfc_on";
-                stringId = R.string.qs_title_nfc;
+                stringId = R.string.qs_tile_nfc;
                 break;
             case QSConstants.TILE_COMPASS:
                 resourceName = "ic_qs_compass_on";
-                stringId = R.string.qs_title_compass;
+                stringId = R.string.qs_tile_compass;
+                break;
+            case QSConstants.TILE_LOCKSCREEN:
+                resourceName = "ic_qs_lock_screen_on";
+                stringId = R.string.qs_title_lockscreen;
+                break;
+            case QSConstants.TILE_LTE:
+                resourceName = "ic_qs_lte_on";
+                stringId = R.string.qs_tile_lte;
+                break;
+            case QSConstants.TILE_SCREEN_TIMEOUT:
+                resourceName = "ic_qs_screen_timeout_vector";
+                stringId = R.string.qs_tile_screen_timeout;
+                break;
+            case QSConstants.TILE_VISUALIZER:
+                resourceName = "ic_qs_visualizer_static";
+                stringId = R.string.qs_tile_visualizer;
                 break;
             default:
                 return null;
