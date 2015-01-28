@@ -42,16 +42,17 @@
                 android:icon="@drawable/ic_audio_ring_24dp"
                 android:title="@string/ring_volume_option_title" />
 
-        <!-- Increasing ring -->
+        <!-- Increasing ring
         <com.android.settings.slim.SystemSettingSwitchPreference
                 android:key="increasing_ring"
                 android:title="@string/increasing_ring_volume_option_title" />
 
-        <!-- Increasing ring volume -->
+        Increasing ring volume
         <com.android.settings.notification.IncreasingRingVolumePreference
                 android:key="increasing_ring_volume"
                 android:icon="@drawable/ring_notif_increasing"
                 android:dependency="increasing_ring" />
+	-->
 
         <!-- Link Volume Notification -->
         <com.android.settings.slim.SecureSettingSwitchPreference
