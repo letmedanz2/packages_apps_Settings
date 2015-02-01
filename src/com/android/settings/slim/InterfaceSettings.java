@@ -18,6 +18,10 @@ package com.android.settings.slim;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -30,8 +34,12 @@ import android.preference.SwitchPreference;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import java.util.List;
+
 public class InterfaceSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final String KEY_BITSYKO_LAYERS = "bitsyko_layers";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +47,23 @@ public class InterfaceSettings extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.slim_interface_settings);
 
+            if (!isPackageInstalled("org.bitsyko.overlaymanager")) {
+                PreferenceScreen screen = getPreferenceScreen();
+                Preference pref = getPreferenceManager().findPreference(KEY_BITSYKO_LAYERS);
+                screen.removePreference(pref);
+                }
+    }
+
+    private boolean isPackageInstalled(String packageName) {
+        PackageManager pm = getPackageManager();
+        boolean installed = false;
+        try {
+           pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+           installed = true;
+        } catch (PackageManager.NameNotFoundException e) {
+           installed = false;
+        }
+        return installed;
     }
 
     @Override
