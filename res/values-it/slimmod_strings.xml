@@ -5,4 +5,31 @@
     <string name="kill_app_longpress_back">Termina app rapido</string>
     <string name="kill_app_longpress_back_summary">Termina l\'app attiva con un tap prolungato sul tasto indietro</string>
 
+    <!-- Status bar power menu -->
+    <string name="status_bar_power_menu_title">Pulsante rapido Power</string>
+    <string name="status_bar_power_menu_dialog_title">Imposta azioni rispettivamente per tap e pressione lunga</string>
+    <string name="status_bar_power_menu_off">Disattivato</string>
+    <string name="status_bar_power_menu_action_screen_off">Spegni schermo - Menu Power</string>
+    <string name="status_bar_power_menu_action_dialog">Menu Power - Spegni schermo</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Traffico di rete</string>
+    <string name="show_network_traffic_state">Tipologia monitor di rete</string>
+    <string name="network_traffic_summary">Attiva il monitoraggio del traffico di rete nella barra di stato</string>
+    <string name="show_network_traffic_unit">Unità</string>
+    <string name="show_network_traffic_frequency">Intervallo di aggiornamento</string>
+    <string name="show_network_traffic_disable">Disattivato</string>
+    <string name="show_network_traffic_up">In uscita</string>
+    <string name="show_network_traffic_down">In entrata</string>
+    <string name="show_network_traffic_all">In uscita ed entrata</string>
+    <string name="show_network_traffic_bit">Bits per secondo</string>
+    <string name="show_network_traffic_byte">Bytes per secondo</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Visualizzazione intelligente</string>
+    <string name="network_traffic_autohide_summary">Nasconde il monitor del traffico in caso di attività di rete sotto la soglia impostata</string>
+    <string name="network_traffic_autohide_threshold">Soglia di inattività</string> 
+
 </resources>
