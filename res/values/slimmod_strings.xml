@@ -29,4 +29,7 @@
     <string name="recents_show_searchbar">Disable Search Bar in Recents Menu</string>
     <string name="recents_show_searchbar_summary">Disable or enable the Google search bar in the recents menu</string>
 
+    <!-- V4A -->
+    <string name="equalizer_settings_title">V4A</string>    
+    
 </resources>
