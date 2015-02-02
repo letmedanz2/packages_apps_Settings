@@ -13,38 +13,11 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/interface_settings_title"
+    android:title="@string/twisted_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceScreen
-        android:key="bitsyko_layers"
-        android:id="@+id/bitsyko_layers"
-        android:title="@string/bitsyko_layers_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="org.bitsyko.overlaymanager"
-            android:targetClass="org.bitsyko.overlaymanager.main" />
-    </PreferenceScreen>
-
-    <PreferenceScreen
-        android:key="quick_settings"
-        android:fragment="com.android.settings.slim.QsSettings"
-        android:title="@string/qs_title" />
-
-    <PreferenceScreen
-        android:key="status_bar"
-        android:fragment="com.android.settings.slim.StatusBar"
-        android:title="@string/status_bar_title" />
-
-<PreferenceScreen
-	android:key="navigation_bar"
-        android:fragment="com.android.settings.slim.NavigationBarSettings"
-	android:title="@string/navigation_bar_title" />
-
-<!-- Equalizer -->
 	<Preference
 		android:id="@+id/equalizer_settings"
 		android:title="@string/equalizer_settings_title"
@@ -54,5 +27,11 @@
 		android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
 		android:targetPackage="com.vipercn.viper4android_v2" />
 	</Preference>
+	
+     <com.android.settings.slim.SystemSettingSwitchPreference
+        android:key="recents_show_hide_search_bar"
+        android:title="@string/recents_show_searchbar"
+        android:summary="@string/recents_show_searchbar_summary"
+        android:defaultValue="false" />
 
 </PreferenceScreen>
