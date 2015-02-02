@@ -5988,4 +5988,27 @@
     <string name="partition_info_sdcard">/sdcard (FAT)</string>
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
+
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_general_category">General</string>
+    <string name="navigation_bar_title">Navigation bar</string>
+    <!-- Navigation Bar Height -->
+    <string name="navigation_bar_height">Height</string>
+    <string name="navigation_bar_height_54">54dp</string>
+    <string name="navigation_bar_height_52">52dp</string>
+    <string name="navigation_bar_height_50">50dp</string>
+    <string name="navigation_bar_height_48">48dp (default)</string>
+    <string name="navigation_bar_height_44">44dp</string>
+    <string name="navigation_bar_height_40">40dp</string>
+    <string name="navigation_bar_height_36">36dp</string>
+    <string name="navigation_bar_height_32">32dp</string>
+    <string name="navigation_bar_height_28">28dp</string>
+    <string name="navigation_bar_height_24">24dp</string>
+    <string name="navigation_bar_height_20">20dp</string>
+    <string name="navigation_bar_height_0">0dp (hide)</string>
+ 
+    <!-- Clear all recents on navbar enabler strings -->
+    <string name="clear_all_recents_navbar_enabled_title">Clear all recents button on Navbar</string>
+    <string name="clear_all_recents_navbar_enabled_summary">Show clear all recents button in navigation bar</string>
+
 </resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/navigation_bar_title" >
+    
+    <PreferenceCategory
+        android:key="navigation_bar_general_category"
+        android:title="@string/navigation_bar_general_category" >
+
+        <ListPreference
+            android:key="navigation_bar_height"
+            android:dialogTitle="@string/navigation_bar_height"
+            android:title="@string/navigation_bar_height"
+            android:entries="@array/navigation_bar_height_entries"
+            android:entryValues="@array/navigation_bar_height_values"
+            android:defaultValue="48"
+            android:persistent="false" />
+
+	<SwitchPreference
+            android:key="clear_all_recents_navbar_enabled"
+            android:title="@string/clear_all_recents_navbar_enabled_title"
+            android:summary="@string/clear_all_recents_navbar_enabled_summary" />
+
+     <com.android.settings.slim.SystemSettingSwitchPreference
+        android:key="recents_show_hide_search_bar"
+        android:title="@string/recents_show_searchbar"
+        android:summary="@string/recents_show_searchbar_summary"
+        android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

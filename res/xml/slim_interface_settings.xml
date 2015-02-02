@@ -39,11 +39,12 @@
         android:fragment="com.android.settings.slim.StatusBar"
         android:title="@string/status_bar_title" />
 
-     <com.android.settings.slim.SystemSettingSwitchPreference
-        android:key="recents_show_hide_search_bar"
-        android:title="@string/recents_show_searchbar"
-        android:summary="@string/recents_show_searchbar_summary"
-        android:defaultValue="false" />
+	
+<PreferenceScreen
+	android:key="navigation_bar"
+        android:fragment="com.android.settings.slim.NavigationBarSettings"
+	android:title="@string/navigation_bar_title" />
+
 
 <!-- Equalizer -->
 	<Preference
