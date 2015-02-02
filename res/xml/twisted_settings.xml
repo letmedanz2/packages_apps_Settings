@@ -31,16 +31,6 @@
 		android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
 		android:targetPackage="com.vipercn.viper4android_v2" />
 	</Preference>
-
-        <Preference
-            android:title="@string/partition_info_title"
-            android:summary="@string/partition_info_summary">
-        <intent
-            android:action="com.android.action.MAIN"
-            android:targetPackage="com.android.settings"
-            android:targetClass="com.android.settings.PartitionInfo" />
-        </Preference>
-
 </PreferenceCategory>
 
  <PreferenceCategory

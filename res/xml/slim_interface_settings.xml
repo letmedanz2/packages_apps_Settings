@@ -39,20 +39,4 @@
         android:fragment="com.android.settings.slim.StatusBar"
         android:title="@string/status_bar_title" />
 
-<PreferenceScreen
-	android:key="navigation_bar"
-        android:fragment="com.android.settings.slim.NavigationBarSettings"
-	android:title="@string/navigation_bar_title" />
-
-<!-- Equalizer -->
-	<Preference
-		android:id="@+id/equalizer_settings"
-		android:title="@string/equalizer_settings_title"
-		android:icon="@drawable/ic_liquid_equalizer" >
-		<intent
-		android:action="android.intent.action.MAIN"
-		android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
-		android:targetPackage="com.vipercn.viper4android_v2" />
-	</Preference>
-
 </PreferenceScreen>
