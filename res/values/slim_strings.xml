@@ -36,6 +36,7 @@
     <string name="nav_bar_settings">Nav Bar</string>
     <string name="status_bar_settings">Status Bar</string>
     <string name="misc_settings">Miscellaneous</string>
+    <string name="equalizer_settings_title">Viper4A</string> 
   
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -588,6 +589,7 @@
 
     <!-- Doze (ambient display) preference category -->
     <string name="display_category_doze_options_title">Ambient display options</string>
+
     <!-- SuperSU header name - the app hides itself from launcher based on this resource name being present in com.android.settings -->
     <string name="supersu_title">SuperSU</string>
 
@@ -615,5 +617,8 @@
     <!-- Clear all recents on navbar enabler strings -->
     <string name="clear_all_recents_navbar_enabled_title">Clear all recents button on Navbar</string>
     <string name="clear_all_recents_navbar_enabled_summary">Show clear all recents button in navigation bar</string>  
+
+    <!-- Default alarm ringtone -->
+    <string name="alarm_ringtone_title">Default alarm ringtone</string>
 
 </resources>
