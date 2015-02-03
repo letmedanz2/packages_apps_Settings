@@ -17,6 +17,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+        <PreferenceScreen
+            android:key="qs_order"
+            android:title="@string/qs_order_title"
+            android:fragment="com.android.settings.cyanogenmod.qs.QSTiles" />
+
+        <com.android.settings.slim.SystemSettingSwitchPreference
+            android:key="sysui_qs_main_tiles"
+            android:title="@string/qs_main_tiles_title"
+            android:summaryOn="@string/qs_main_tiles_summary_on"
+            android:summaryOff="@string/qs_main_tiles_summary_off"
+            android:defaultValue="true" />
+
         <ListPreference
             android:key="quick_pulldown"
             android:title="@string/title_quick_pulldown"
