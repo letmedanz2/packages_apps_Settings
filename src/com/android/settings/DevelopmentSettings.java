@@ -492,7 +492,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
         final ContentResolver cr = getActivity().getContentResolver();
         mLastEnabledState = Settings.Global.getInt(cr,
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) != 0;
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 1) != 0;
         mSwitchBar.setChecked(mLastEnabledState);
         setPrefsEnabledState(mLastEnabledState);
         updateKillAppLongpressBackOptions();
@@ -675,7 +675,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private void updateKillAppLongpressBackOptions() {
         mKillAppLongpressBack.setChecked(Settings.Secure.getInt(
-            getActivity().getContentResolver(), Settings.Secure.KILL_APP_LONGPRESS_BACK, 0) != 0);
+            getActivity().getContentResolver(), Settings.Secure.KILL_APP_LONGPRESS_BACK, 1) != 0);
     }
 
     private void updatePasswordSummary() {
@@ -1067,7 +1067,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private void updateUseNuplayerOptions() {
         updateSwitchPref(
-                mUseNuplayer, !SystemProperties.getBoolean(USE_AWESOMEPLAYER_PROPERTY, false));
+                mUseNuplayer, !SystemProperties.getBoolean(USE_AWESOMEPLAYER_PROPERTY, true));
     }
 
     private void writeUseNuplayerOptions() {
@@ -1371,7 +1371,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
                 // Hide development settings from the Settings menu
                 getActivity().getSharedPreferences(PREF_FILE, Context.MODE_PRIVATE).edit()
-                        .putBoolean(PREF_SHOW, false)
+                        .putBoolean(PREF_SHOW, true)
                         .apply();
 
             }
