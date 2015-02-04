@@ -598,7 +598,9 @@
 
     <!-- BitSyko Layers  -->
     <string name="bitsyko_layers_title">Themes</string>
-
+    <string name="layers_settings">Layers</string>
+    
+    
     <!-- Navigation Bar -->
     <string name="navigation_bar_title">Navigation bar</string>
 
