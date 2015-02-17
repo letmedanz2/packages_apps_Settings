@@ -563,10 +563,6 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
                 case UPDATE_ALARM_RINGTONE:
                     mAlarmRingtonePreference.setSummary((CharSequence) msg.obj);
                     break;
-                case UPDATE_ALARM_RINGTONE:
-                    mAlarmRingtonePreference.setSummary((CharSequence) msg.obj);
-                    break;
-
             }
         }
     }
