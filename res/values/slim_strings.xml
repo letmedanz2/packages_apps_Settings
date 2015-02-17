@@ -37,6 +37,7 @@
     <string name="status_bar_settings">Status Bar</string>
     <string name="misc_settings">Miscellaneous</string>
     <string name="equalizer_settings_title">Viper4A</string> 
+    <string name="disp_settings">Display</string>
   
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>

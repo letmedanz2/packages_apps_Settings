@@ -78,7 +78,7 @@
     <!-- twisted -->
         <dashboard-tile
                 android:id="@+id/twisted_settings"
-                android:icon="@drawable/ic_twisted_settings_interface"
+                android:icon="@drawable/ic_twisted"
                 android:fragment="com.android.settings.slim.TwistedSettings"
                 android:title="@string/twisted_settings_title"
                 />

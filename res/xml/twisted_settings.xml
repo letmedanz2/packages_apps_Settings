@@ -25,7 +25,7 @@
   <Preference
 		android:id="@+id/equalizer_settings"
 		android:title="@string/equalizer_settings_title"
-		android:icon="@drawable/ic_liquid_equalizer" >
+		android:icon="@drawable/ic_settings_viper" >
 		<intent
 		android:action="android.intent.action.MAIN"
 		android:targetClass="com.lovejoy777.rroandlayersmanager.menu"
@@ -70,6 +70,15 @@
 
 </PreferenceCategory>
 
+ <PreferenceCategory
+   android:key="disp"
+   android:title="@string/disp_settings" >
+        <PreferenceScreen
+                android:key="expanded_desktop"
+                android:title="@string/power_menu_expanded_desktop"
+                android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
+</PreferenceCategory>	
+	
     <PreferenceCategory
       android:key="misc"
       android:title="@string/misc_settings" >
