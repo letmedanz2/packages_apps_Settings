@@ -19,36 +19,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
  <PreferenceCategory
-  android:key="audio"
-  android:title="@string/audio_settings" >
- 
-  <Preference
-		android:id="@+id/equalizer_settings"
-		android:title="@string/equalizer_settings_title"
-		android:icon="@drawable/ic_settings_viper" >
-		<intent
-		android:action="android.intent.action.MAIN"
-		android:targetClass="com.lovejoy777.rroandlayersmanager.menu"
-		android:targetPackage="com.lovejoy777.rroandlayersmanager" />
-	</Preference>
-</PreferenceCategory>
-
- <PreferenceCategory
-  android:key="Layers"
-  android:title="@string/layers_settings" >
-   
-    <PreferenceScreen
-        android:key="bitsyko_layers"
-        android:id="@+id/bitsyko_layers"
-        android:title="@string/bitsyko_layers_title">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="org.bitsyko.overlaymanager"
-            android:targetClass="org.bitsyko.overlaymanager.main" />
-    </PreferenceScreen>
-</PreferenceCategory>  
-
- <PreferenceCategory
   android:key="nav_bar"
   android:title="@string/nav_bar_settings" >
    
@@ -100,4 +70,50 @@
 
      </PreferenceCategory>
 
+<PreferenceCategory
+  android:key="extra"
+  android:title="@string/extra_settings" >
+ 
+  <Preference
+		android:id="@+id/equalizer_settings"
+		android:title="@string/equalizer_settings_title"
+		android:icon="@drawable/ic_settings_viper" >
+		<intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android"
+		android:targetPackage="com.vipercn.viper4android_v2" />
+	</Preference>
+</PreferenceCategory>
+
+  <Preference
+		android:id="@+id/bitsyko"
+		android:title="@string/bitsyko_layers_title"
+		android:icon="@drawable/ic_bitsyko_layers" >
+		<intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="com.lovejoy777.rroandlayersmanager.menu"
+		android:targetPackage="com.lovejoy777.rroandlayersmanager" />
+	</Preference>
+
+        <!-- SuperSU -->
+        <Preference
+            android:id="@+id/supersu_settings"
+            android:icon="@drawable/ic_settings_supersu"
+            android:title="@string/supersu_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="eu.chainfire.supersu"
+                android:targetClass="eu.chainfire.supersu.MainActivity" />
+	    </Preference>
+
+ <PreferenceScreen
+        android:key="bitsyko_layers"
+        android:id="@+id/bitsyko_layers"
+        android:title="@string/bitsyko_layers_title">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="org.bitsyko.overlaymanager"
+            android:targetClass="org.bitsyko.overlaymanager.main" />
+    </PreferenceScreen>
+    
 </PreferenceScreen>
