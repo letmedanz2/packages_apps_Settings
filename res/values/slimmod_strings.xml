@@ -78,4 +78,5 @@
     <string name="qs_advanced_location_title">Advanced location quick settings</string>
     <string name="qs_advanced_location_summary">Enable advanced settings for location in quick settings</string>
 
+    <string name="qs_tile_reboot">Reboot</string>
 </resources>

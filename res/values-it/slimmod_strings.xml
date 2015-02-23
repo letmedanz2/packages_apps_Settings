@@ -70,4 +70,58 @@
     <string name="qs_advanced_location_title">Tile localizzazione avanzata</string>
     <string name="qs_advanced_location_summary">Permette di configurare la localizzazione direttamente tramite l\'apposita tile</string>
 
+    <string name="qs_tile_reboot">Riavvio</string>
+
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_title">Barra di navigazione</string>
+
+    <!-- Navigation Bar Height -->
+    <string name="navigation_bar_height">Altezza barra navigazione</string>
+    <string name="navigation_bar_height_48">48dp (default)</string>
+    <string name="navigation_bar_height_44">44dp</string>
+    <string name="navigation_bar_height_40">40dp</string>
+    <string name="navigation_bar_height_36">36dp</string>
+    <string name="navigation_bar_height_32">32dp</string>
+    <string name="navigation_bar_height_28">28dp</string>
+    <string name="navigation_bar_height_24">24dp</string>
+    <string name="navigation_bar_height_20">20dp</string>
+    <string name="navigation_bar_height_0">0dp (nascosta)</string>
+
+    <!-- Clear all recents on navbar enabler strings -->
+    <string name="clear_all_recents_navbar_enabled_title">Pulsante pulisci app recenti</string>
+    <string name="clear_all_recents_navbar_enabled_summary">Visualizza nella navbar il pulsante per la pulizia del pannello app recenti</string>
+
+    <!-- BitSyko Layers  -->
+    <string name="bitsyko_layers_title">Configurazione temi</string>
+
+    <!-- Status bar - Battery Options -->
+    <string name="battery_icon_options_title">Impostazioni icona batteria</string>
+
+    <!-- Status bar - Battery Style -->
+    <string name="status_bar_battery_style_title">Stile icona stato batteria</string>
+    <string name="status_bar_battery_style_circle">Cerchio</string>
+    <string name="status_bar_battery_style_dotted_circle">Cerchio seghettato</string>
+    <string name="status_bar_battery_style_text">Testo</string>
+    <string name="status_bar_battery_style_hidden">Nascosto</string>
+    <string name="status_bar_battery_style_icon_portrait">Batteria verticale</string>
+    <string name="status_bar_battery_style_icon_landscape">Batteria orizzontale</string>
+
+    <!-- Status bar - Battery percentage -->
+    <string name="status_bar_battery_percentage_title">Percentuale batteria</string>
+    <string name="status_bar_battery_percentage_dialog_title">Percentuale batteria</string>
+    <string name="status_bar_battery_percentage_default">Nascosta (default)</string>
+    <string name="status_bar_battery_percentage_text_inside">Nell\'icona</string>
+    <string name="status_bar_battery_percentage_text_next">Accanto all\'icona</string>
+
+    <!-- Expanded Desktop -->
+    <string name="power_menu_expanded_desktop">Desktop espanso</string>
+    <string name="expanded_hide_nothing">Non nascondere barre</string>
+    <string name="expanded_hide_status">Nascondi barra di stato</string>
+    <string name="expanded_hide_navigation">Nascondi barra di navigazione</string>
+    <string name="expanded_hide_both">Nascondi barre</string>
+    <string name="expanded_nothing_to_show">Per aggiungere una configurazione di desktop espanso specifica per app, disattiva \'Attivo per tutte le app\'</string>
+    <string name="expanded_desktop_state">Stato espanso</string>
+    <string name="expanded_enabled_for_all">Attivo per tutte le app</string>
+    <string name="expanded_user_configurable">Configurabile dall\'utente</string>
+
 </resources>

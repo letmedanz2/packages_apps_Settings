@@ -132,6 +132,10 @@ public class QSTileHolder {
                 resourceName = "ic_qs_visualizer_static";
                 stringId = R.string.qs_tile_visualizer;
                 break;
+            case QSConstants.TILE_REBOOT:
+                resourceName = "ic_qs_reboot";
+                stringId = R.string.qs_tile_reboot;
+                break;
             default:
                 return null;
         }
