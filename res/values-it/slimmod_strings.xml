@@ -36,4 +36,18 @@
     <string name="recents_show_searchbar">Disattiva barra di ricerca nei recenti</string>
     <string name="recents_show_searchbar_summary">Disattiva la barra di ricerca Google nel menu delle app recenti</string>
 
+
+    <!-- Quick settings -->
+    <string name="qs_order_title">Seleziona e ordina tiles</string>
+    <string name="add_qs">Aggiungi tile</string>
+    <string name="cast_screen">Trasmetti schermo</string>
+    <string name="hotspot">Hotspot</string>
+    <string name="notifications">Notifiche</string>
+    <string name="qs_action_delete">Elimina</string>
+    <string name="qs_action_add">Aggiungi</string>
+    <string name="qs_action_no_more_tiles">Non ci sono tiles da aggiungere</string>
+    <string name="qs_main_tiles_title">Espandi prima riga</string>
+    <string name="qs_main_tiles_summary_on">Due tiles importanti nella prima riga</string>
+    <string name="qs_main_tiles_summary_off">Tre tiles per riga</string>
+
 </resources>
