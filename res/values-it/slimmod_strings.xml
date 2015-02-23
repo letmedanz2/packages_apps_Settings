@@ -36,38 +36,4 @@
     <string name="recents_show_searchbar">Disattiva barra di ricerca nei recenti</string>
     <string name="recents_show_searchbar_summary">Disattiva la barra di ricerca Google nel menu delle app recenti</string>
 
-
-    <!-- Quick settings -->
-    <string name="tiles_configuration">Configurazione delle tiles</string>
-    <string name="qs_order_title">Seleziona e ordina tiles</string>
-    <string name="add_qs">Aggiungi tile</string>
-    <string name="qs_action_delete">Elimina</string>
-    <string name="qs_action_add">Aggiungi</string>
-    <string name="qs_action_no_more_tiles">Non ci sono tiles da aggiungere</string>
-
-    <string name="qs_tile_wifi">Wi\u2011Fi</string>
-    <string name="qs_tile_bluetooth">Bluetooth</string>
-    <string name="qs_tile_display_inversion">Inverti colori</string>
-    <string name="qs_tile_cellular_data">Dati</string>
-    <string name="qs_tile_airplane_mode">Modalità Aereo</string>
-    <string name="qs_tile_display_rotation">Rotazione</string>
-    <string name="qs_tile_flashlight">Torcia</string>
-    <string name="qs_tile_location">Localizzazione</string>
-    <string name="qs_tile_cast_screen">Trasmetti schermo</string>
-    <string name="qs_tile_hotspot">Hotspot</string>
-    <string name="qs_tile_notifications">Notifiche</string>
-    <string name="qs_tile_nfc">NFC</string>
-    <string name="qs_tile_compass">Bussola</string>
-    <string name="qs_title_lockscreen">Schermata di blocco</string>
-    <string name="qs_tile_lte">LTE</string>
-    <string name="qs_tile_screen_timeout">Timeout schermo</string>
-    <string name="qs_tile_visualizer">AudioFX</string>
-
-    <string name="qs_main_tiles_title">Espandi prima riga</string>
-    <string name="qs_main_tiles_summary_on">Due tiles importanti nella prima riga</string>
-    <string name="qs_main_tiles_summary_off">Tre tiles per riga</string>
-
-    <string name="qs_advanced_location_title">Tile localizzazione avanzata</string>
-    <string name="qs_advanced_location_summary">Permette di configurare la localizzazione direttamente tramite l\'apposita tile</string>
-
 </resources>

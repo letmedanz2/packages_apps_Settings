@@ -90,6 +90,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         mSession.resume();
         mActivityFilter = new ActivityFilter(getActivity().getPackageManager());
 
+
         mExpandedDesktopState = getExpandedDesktopState(getActivity().getContentResolver());
         if (mExpandedDesktopState == STATE_USER_CONFIGURABLE) {
             WindowManagerPolicyControl.reloadFromSetting(getActivity(),
@@ -98,7 +99,6 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         mAllPackagesAdapter = new AllPackagesAdapter(getActivity());
 
         mAllPackagesAdapter.notifyDataSetChanged();
-
         setHasOptionsMenu(true);
     }
 
@@ -257,14 +257,13 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
             } else {
                 sectionIndex = label.substring(0, 1).toUpperCase();
             }
-
             if (lastSectionIndex == null ||
                     !TextUtils.equals(sectionIndex, lastSectionIndex)) {
+
                 sections.add(sectionIndex);
                 positions.add(offset);
                 lastSectionIndex = sectionIndex;
             }
-
             offset++;
         }
 
@@ -292,6 +291,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
     }
 
     private void save() {
+
         if (mExpandedDesktopState == STATE_USER_CONFIGURABLE) {
             WindowManagerPolicyControl.saveToSettings(getActivity(),
                     Settings.Global.POLICY_CONTROL);
@@ -449,6 +449,7 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
              * To get from that number to the expected value of 1 we need to negate
              * and subtract 2.
              */
+
             return index >= 0 ? index : -index - 2;
         }
 
@@ -565,3 +566,4 @@ public class ExpandedDesktopPreferenceFragment extends SettingsPreferenceFragmen
         }
     }
 }
+

@@ -33,7 +33,6 @@ import android.view.View;
 
 import com.android.internal.widget.LockPatternUtils;
 
-import com.android.settings.cyanogenmod.qs.QSTiles;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 
@@ -48,10 +47,9 @@ public class QsSettings extends SettingsPreferenceFragment
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
     private static final String PREF_BLOCK_ON_SECURE_KEYGUARD = "block_on_secure_keyguard";
 
-    private ListPreference mQuickPulldown;
-    private ListPreference mSmartPulldown;
-    private SwitchPreference mBlockOnSecureKeyguard;
-    private Preference mQSTiles;
+    ListPreference mQuickPulldown;
+    ListPreference mSmartPulldown;
+    SwitchPreference mBlockOnSecureKeyguard;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,20 +86,11 @@ public class QsSettings extends SettingsPreferenceFragment
             prefs.removePreference(mBlockOnSecureKeyguard);
         }
 
-        // QS Tiles
-        mQSTiles = findPreference("qs_order");
-
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
-        int qsTileCount = QSTiles.determineTileCount(getActivity());
-        if (mQSTiles != null) {
-            mQSTiles.setSummary(getResources().getQuantityString(R.plurals.qs_tiles_summary,
-                        qsTileCount, qsTileCount));
-        }
     }
 
     @Override
