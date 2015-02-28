@@ -6011,4 +6011,7 @@
     <string name="clear_all_recents_navbar_enabled_title">Clear all recents button on Navbar</string>
     <string name="clear_all_recents_navbar_enabled_summary">Show clear all recents button in navigation bar</string>
 
+    <string name="qs_screenshot_tile">Screenshot</string>
+    <string name="qs_sync_tile">Sync</string>
+
 </resources>
