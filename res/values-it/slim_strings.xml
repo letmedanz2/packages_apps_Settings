@@ -368,6 +368,7 @@
   <string name="shortcut_action_search">Ricerca nell\'app</string>
   <string name="shortcut_action_ring_vib">Suoneria/Vibrazione</string>
   <string name="shortcut_action_ring_silent">Suoneria/Silenzioso</string>
+  <string name="shortcut_action_torch">Torcia</string>
   <string name="shortcut_action_ring_vib_silent">Suoneria/Vibrazione/Silenzioso</string>
   <string name="shortcut_action_camera">Fotocamera</string>
   <string name="shortcut_action_media_next">Musica - traccia successiva</string>
