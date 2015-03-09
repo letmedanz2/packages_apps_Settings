@@ -100,6 +100,17 @@
 		android:targetPackage="com.lovejoy777.rroandlayersmanager" />
 	</Preference>
 
+	<!-- Layers Backup -->
+	<Preference
+		android:id="@+id/layers_backup_settings"
+		android:title="@string/layers_backup_title"
+		android:icon="@drawable/ic_liquid_equalizer" >
+		<intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="com.kantjer.xda.layers.main"
+		android:targetPackage="com.kantjer.xda.layers" />
+	</Preference>
+	
         <!-- SuperSU -->
         <Preference
             android:id="@+id/supersu_settings"
@@ -110,7 +121,7 @@
                 android:targetPackage="eu.chainfire.supersu"
                 android:targetClass="eu.chainfire.supersu.MainActivity" />
 	    </Preference>
-
+	    
  <PreferenceScreen
         android:key="bitsyko_layers"
         android:id="@+id/bitsyko_layers"
