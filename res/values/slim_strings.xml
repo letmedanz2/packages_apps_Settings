@@ -40,7 +40,8 @@
     <string name="disp_settings">Display</string>
     <string name="extra_settings">Extras</string>  
     <string name="layers_backup_title">Layers Backup</string>  
-      
+    <string name="adaway_title">AdAway</string> 
+          
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>

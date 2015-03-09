@@ -107,8 +107,8 @@
 		android:icon="@drawable/ic_liquid_equalizer" >
 		<intent
 		android:action="android.intent.action.MAIN"
-		android:targetClass="com.kantjer.xda.layers.main"
-		android:targetPackage="com.kantjer.xda.layers" />
+                android:targetPackage="com.kantjer.xda.layers"
+                android:targetClass="net.dinglisch.android.tasker.Kid" />
 	</Preference>
 	
         <!-- SuperSU -->
@@ -120,8 +120,19 @@
                 android:action="android.intent.action.MAIN"
                 android:targetPackage="eu.chainfire.supersu"
                 android:targetClass="eu.chainfire.supersu.MainActivity" />
-	    </Preference>
-	    
+        </Preference>
+	
+	<!-- AdAway -->
+	<Preference
+		android:id="@+id/adaway_settings"
+		android:title="@string/adaway_title"
+		android:icon="@drawable/ic_liquid_equalizer" >
+		<intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="org.adaway.ui.BaseActivity"
+		android:targetPackage="org.adaway" />
+	</Preference>
+
  <PreferenceScreen
         android:key="bitsyko_layers"
         android:id="@+id/bitsyko_layers"
