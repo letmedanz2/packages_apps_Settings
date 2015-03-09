@@ -104,7 +104,7 @@
 	<Preference
 		android:id="@+id/layers_backup_settings"
 		android:title="@string/layers_backup_title"
-		android:icon="@drawable/ic_liquid_equalizer" >
+		android:icon="@drawable/ic_wps_dark" >
 		<intent
 		android:action="android.intent.action.MAIN"
                 android:targetPackage="com.kantjer.xda.layers"
@@ -126,7 +126,7 @@
 	<Preference
 		android:id="@+id/adaway_settings"
 		android:title="@string/adaway_title"
-		android:icon="@drawable/ic_liquid_equalizer" >
+		android:icon="@drawable/ic_item_delete" >
 		<intent
 		android:action="android.intent.action.MAIN"
 		android:targetClass="org.adaway.ui.BaseActivity"
