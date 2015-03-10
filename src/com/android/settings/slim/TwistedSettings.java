@@ -40,6 +40,7 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
         
         private static final String KEY_BITSYKO_LAYERS = "bitsyko_layers";
+        private static final String KEY_EQUALIZER_SETTINGS = "equalizer_settings";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,12 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
                 PreferenceScreen screen = getPreferenceScreen();
                 Preference pref = getPreferenceManager().findPreference(KEY_BITSYKO_LAYERS);
                 screen.removePreference(pref);
-                }
+            }
+            if (!isPackageInstalled("com.vipercn.viper4android_v2")) {
+	      PreferenceScreen screen = getPreferenceScreen();
+	      Preference pref = getPreferenceManager().findPreference(KEY_EQUALIZER_SETTINGS);
+	      screen.removePreference(pref);
+	    }
     }
 
     private boolean isPackageInstalled(String packageName) {
