@@ -128,13 +128,24 @@
 	<Preference
 		android:id="@+id/adaway_settings"
 		android:title="@string/adaway_title"
-		android:icon="@drawable/ic_item_delete" >
+		android:icon="@drawable/ic_adaway" >
 		<intent
 		android:action="android.intent.action.MAIN"
 		android:targetClass="org.adaway.ui.BaseActivity"
 		android:targetPackage="org.adaway" />
 	</Preference>
 
+	<!-- LMT-->
+	<Preference
+		android:id="@+id/lmt_settings"
+		android:title="@string/lmt_title"
+		android:icon="@drawable/ic_settings_data_usage" >
+		<intent
+		android:action="android.intent.action.MAIN"
+		android:targetClass="LMT"
+		android:targetPackage="com.android.lmt" />
+	</Preference>
+	
  <PreferenceScreen
         android:key="bitsyko_layers"
         android:id="@+id/bitsyko_layers"
