@@ -22,6 +22,15 @@
             android:title="@string/clear_all_recents_navbar_enabled_title"
             android:summary="@string/clear_all_recents_navbar_enabled_summary" />
 
-    </PreferenceCategory>
+        <PreferenceScreen
+            android:key="navigation_bar"
+            android:fragment="com.android.settings.cyanogenmod.NavBar"
+            android:title="@string/navigation_bar_buttons" />
+
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+                android:key="navigation_bar_menu_arrow_keys"
+                android:title="@string/navigation_bar_arrow_keys_title"
+                android:summary="@string/navigation_bar_arrow_keys_summary"
+                android:defaultValue="false" />
 
 </PreferenceScreen>
