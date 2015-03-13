@@ -45,6 +45,7 @@ import android.os.StrictMode;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -61,6 +62,7 @@ import android.view.View;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
@@ -166,7 +168,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
 
-    private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
+    private static final String KEY_CHAMBER_OF_SECRETS = "chamber_of_secrets";
+    private static final String KEY_CHAMBER_OF_UNLOCKED_SECRETS =
+            "chamber_of_unlocked_secrets";
 
     private static final int RESULT_DEBUG_APP = 1000;
 
@@ -244,6 +248,10 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private Object mSelectedRootValue;
 
     private PreferenceScreen mProcessStats;
+
+    private Preference mChamber;
+    private CheckBoxPreference mChamberUnlocked;
+
     private final ArrayList<Preference> mAllPrefs = new ArrayList<Preference>();
 
     private final ArrayList<SwitchPreference> mResetSpPrefs
@@ -392,6 +400,22 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             mAllPrefs.add(mRootAccess);
         }
 
+        mChamber = (Preference) findPreference(KEY_CHAMBER_OF_SECRETS);
+        mAllPrefs.add(mChamber);
+        mChamberUnlocked =
+                findAndInitCheckboxPref(KEY_CHAMBER_OF_UNLOCKED_SECRETS);
+        mChamberUnlocked.setOnPreferenceChangeListener(this);
+
+        boolean chamberOpened = Settings.Secure.getInt(
+                getActivity().getContentResolver(),
+                Settings.Secure.CHAMBER_OF_SECRETS, 0) == 1;
+        mChamberUnlocked.setChecked(chamberOpened);
+
+        if (chamberOpened) {
+            removePreference(mChamber);
+        } else {
+            removePreference(mChamberUnlocked);
+        }
     }
 
     private ListPreference addListPreference(String prefKey) {
@@ -418,6 +442,15 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         return pref;
     }
 
+    private CheckBoxPreference findAndInitCheckboxPref(String key) {
+        CheckBoxPreference pref = (CheckBoxPreference) findPreference(key);
+        if (pref == null) {
+            throw new IllegalArgumentException("Cannot find preference with key = " + key);
+        }
+        mAllPrefs.add(pref);
+        // mResetCbPrefs.add(pref);
+        return pref;
+    }
 
     private boolean removeRootOptionsIfRequired() {
         // user builds don't get root, and eng always gets root
@@ -456,6 +489,12 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private void removePreference(Preference preference) {
         getPreferenceScreen().removePreference(preference);
         mAllPrefs.remove(preference);
+    }
+
+    private void addPreference(Preference preference) {
+        getPreferenceScreen().addPreference(preference);
+        preference.setOnPreferenceChangeListener(this);
+        mAllPrefs.add(preference);
     }
 
     private void setPrefsEnabledState(boolean enabled) {
@@ -1495,6 +1534,18 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeUSBAudioOptions();
         } else if (preference == mKillAppLongpressBack) {
             writeKillAppLongpressBackOptions();
+        } else if (preference == mChamber) {
+            if (Settings.Secure.getInt(getActivity().getContentResolver(),
+                    Settings.Secure.CHAMBER_OF_SECRETS, 0) == 0) {
+                Settings.Secure.putInt(getActivity().getContentResolver(),
+                        Settings.Secure.CHAMBER_OF_SECRETS, 1);
+                Toast.makeText(getActivity(),
+                        R.string.chamber_toast,
+                        Toast.LENGTH_LONG).show();
+                getPreferenceScreen().removePreference(mChamber);
+                addPreference(mChamberUnlocked);
+                mChamberUnlocked.setChecked(true);
+            }
         } else {
             return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
@@ -1560,6 +1611,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             } else {
                 writeRootAccessOptions(newValue);
             }
+            return true;
+        } else if (preference == mChamberUnlocked) {
+            Settings.Secure.putInt(getActivity().getContentResolver(),
+                    Settings.Secure.CHAMBER_OF_SECRETS,
+                    (Boolean) newValue ? 1 : 0);
             return true;
         }
         return false;
