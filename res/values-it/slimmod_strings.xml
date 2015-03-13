@@ -159,4 +159,7 @@
     <string name="navigation_bar_arrow_keys_title">Cursori freccia durante la digitazione</string>
     <string name="navigation_bar_arrow_keys_summary">Mostra i cursori sinistra e destra durante la digitazione. Sovrascrive l\'IME switcher.</string>
 
+    <string name="navigation_ring_title">Obiettivi anello</string>
+    <string name="navigation_ring_message">Tappa l\'icona di modifica per personalizzare gli obiettivi dell\'anello.\n\nSeleziona un obiettivo per configurarne il comportamento.\n\nQuindi salva per confermare i cambiamenti.</string>
+
 </resources>
