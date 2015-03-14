@@ -18,8 +18,19 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
-        android:key="tiles"
-        android:title="@string/tiles_configuration" >
+            android:key="category_qs_general"
+            android:title="@string/qs_category_general_title">
+
+        <com.android.settings.slim.SystemSettingSwitchPreference
+            android:key="qs_show_brightness_slider"
+            android:title="@string/qs_brightness_slider_title"
+            android:defaultValue="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="category_qs_tiles"
+            android:title="@string/qs_category_tiles_title">
 
         <PreferenceScreen
             android:key="qs_order"
@@ -48,7 +59,7 @@
             android:key="qs_show_brightness_slider"
             android:title="@string/qs_brightness_slider_title"
             android:defaultValue="true"/>
-            
+
     </PreferenceCategory>
 
         <ListPreference

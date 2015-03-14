@@ -136,4 +136,42 @@
     <string name="navigation_ring_title">Navigation ring targets</string>
     <string name="navigation_ring_message">Tap the edit icon to open the navigation ring for editing.\n\nSelect a target to configure its behavior.\n\nTap the check mark icon to save your changes, or restore to reset the settings to defaults.</string>
 
+    <string name="qs_category_general_title">General</string>
+    <string name="qs_category_tiles_title">Tiles</string>
+
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_title">Navigation bar</string>
+
+    <!-- Navigation Bar Height -->
+    <string name="navigation_bar_height">Navigation bar height</string>
+    <string name="navigation_bar_height_48">48dp (default)</string>
+    <string name="navigation_bar_height_44">44dp</string>
+    <string name="navigation_bar_height_40">40dp</string>
+    <string name="navigation_bar_height_36">36dp</string>
+    <string name="navigation_bar_height_32">32dp</string>
+    <string name="navigation_bar_height_28">28dp</string>
+    <string name="navigation_bar_height_24">24dp</string>
+    <string name="navigation_bar_height_20">20dp</string>
+    <string name="navigation_bar_height_0">0dp (hide)</string>
+
+    <!-- Clear all recents on navbar enabler strings -->
+    <string name="clear_all_recents_navbar_enabled_title">Clear all recents button on Navbar</string>
+    <string name="clear_all_recents_navbar_enabled_summary">Show clear all recents button in navigation bar</string>
+
+    <!-- Expanded Desktop -->
+    <string name="power_menu_expanded_desktop">Expanded desktop</string>
+    <string name="expanded_hide_nothing">Hide nothing</string>
+    <string name="expanded_hide_status">Hide status bar</string>
+    <string name="expanded_hide_navigation">Hide navigation bar</string>
+    <string name="expanded_hide_both">Hide both</string>
+    <string name="expanded_nothing_to_show">To add a custom per-app configuration for expanded state, set \'Enabled for all\' to the off position</string>
+    <string name="expanded_desktop_state">Expanded state</string>
+    <string name="expanded_enabled_for_all">Enabled for all</string>
+    <string name="expanded_user_configurable">User configurable</string>
+    <string name="expanded_desktop_style">Expanded desktop style</string>
+    <string name="expanded_desktop_style_description">Choose a default expanded desktop style</string>
+    <string name="expanded_desktop_title">Expanded desktop options</string>
+
+    <string name="qs_screenshot_tile">Screenshot</string>
+
 </resources>
