@@ -143,4 +143,8 @@
     <string name="navigation_ring_title">Obiettivi anello</string>
     <string name="navigation_ring_message">Tappa l\'icona di modifica per personalizzare gli obiettivi dell\'anello.\n\nSeleziona un obiettivo per configurarne il comportamento.\n\nQuindi salva per confermare i cambiamenti.</string>
 
+    <!-- Show pending notification's count -->
+    <string name="status_bar_notif_count_title">Visualizza il numero delle notifiche</string>
+    <string name="status_bar_notif_count_summary">Visualizza il numero delle notifiche pendenti</string>
+
 </resources>

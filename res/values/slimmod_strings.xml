@@ -178,4 +178,8 @@
     <string name="qs_brightness_tile">Brightness</string>
     <string name="qs_expanded_desktop_tile">Expanded desktop</string>
 
+    <!-- Show notification count -->
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
+
 </resources>
