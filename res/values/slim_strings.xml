@@ -716,7 +716,7 @@
 
     <!-- Navigation settings -->
     <string name="navigation_settings_options_title">Navigation options</string>
-    <string name="power_menu_title">Global menu</string>
+    <string name="power_menu_title">Power Menu</string>
 
     <!-- Hardware keys -->
     <string name="button_keys_title">Hardware Buttons</string>

@@ -57,11 +57,6 @@
                 android:title="@string/lift_to_wake_title"
                 android:persistent="false" />
 
-        <ListPreference
-                android:key="lcd_density"
-                android:title="@string/lcd_density"
-                android:persistent="false" />
-
         <com.android.settings.FontDialogPreference
                 android:key="font_size"
                 android:title="@string/title_font_size"
@@ -89,11 +84,6 @@
                     android:targetPackage="com.slim.device"
                     android:targetClass="com.slim.device.settings.ScreenOffGestureSettings" />
         </Preference>
-
-        <PreferenceScreen
-                android:key="expanded_desktop"
-                android:title="@string/power_menu_expanded_desktop"
-                android:fragment="com.android.settings.applications.ExpandedDesktopPreferenceFragment" />
 
         <PreferenceCategory
             android:key="category_doze_options"
