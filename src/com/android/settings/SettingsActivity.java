@@ -301,7 +301,6 @@ public class SettingsActivity extends Activity
             AppNotificationSettings.class.getName(),
             OtherSoundSettings.class.getName(),
             QuickLaunchSettings.class.getName(),
-	    QSTiles.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName()
     };
 

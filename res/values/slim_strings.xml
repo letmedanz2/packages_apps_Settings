@@ -772,6 +772,7 @@
     <string name="shortcut_action_torch">Torch</string>
     <string name="shortcut_action_voice_search">Voice search</string>
     <string name="shortcut_action_none">None</string>
+        <string name="power_menu_title">Global menu</string>
 
         <string name="qs_tile_slimaction">SlimAction</string>
    <string name="qs_slim_action_title">SlimActions</string>
