@@ -142,7 +142,7 @@
 		android:icon="@drawable/ic_settings_data_usage" >
 		<intent
 		android:action="android.intent.action.MAIN"
-		android:targetClass="LMT"
+		android:targetClass="com.android.lmt.LMT"
 		android:targetPackage="com.android.lmt" />
 	</Preference>
 	

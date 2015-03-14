@@ -644,7 +644,6 @@
          their presence in MIME type whitelist -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
 
-<<<<<<< HEAD
     <!-- BitSyko Layers  -->
     <string name="bitsyko_layers_title">Themes</string>
     <string name="layers_settings">Layers</string>
