@@ -100,7 +100,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String ENABLE_ADB = "enable_adb";
     private static final String CLEAR_ADB_KEYS = "clear_adb_keys";
     private static final String ADB_NOTIFY = "adb_notify";
-    private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String KEEP_SCREEN_ON = "keep_screen_on";
     private static final String BT_HCI_SNOOP_LOG = "bt_hci_snoop_log";
     private static final String ENABLE_OEM_UNLOCK = "oem_unlock_enable";
@@ -154,12 +153,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
 
     private static final String OPENGL_TRACES_KEY = "enable_opengl_traces";
 
+    private static final String ENABLE_TERMINAL = "enable_terminal";
     private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
-
     private static final String IMMEDIATELY_DESTROY_ACTIVITIES_KEY
             = "immediately_destroy_activities";
     private static final String APP_PROCESS_LIMIT_KEY = "app_process_limit";
-
     private static final String SHOW_ALL_ANRS_KEY = "show_all_anrs";
 
     private static final String PROCESS_STATS = "proc_stats";
@@ -171,6 +169,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String KEY_CHAMBER_OF_SECRETS = "chamber_of_secrets";
     private static final String KEY_CHAMBER_OF_UNLOCKED_SECRETS =
             "chamber_of_unlocked_secrets";
+
+    private static final String TERMINAL_APP_PACKAGE = "com.android.terminal";
 
     private static final int RESULT_DEBUG_APP = 1000;
 
@@ -193,7 +193,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mEnableAdb;
     private Preference mClearAdbKeys;
     private SwitchPreference mAdbNotify;
-    private SwitchPreference mEnableTerminal;
     private SwitchPreference mKeepScreenOn;
     private SwitchPreference mBtHciSnoopLog;
     private SwitchPreference mEnableOemUnlock;
@@ -236,6 +235,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mUseNuplayer;
     private SwitchPreference mUSBAudio;
 
+    private SwitchPreference mEnableTerminal;
     private SwitchPreference mKillAppLongpressBack;
 
     private SwitchPreference mImmediatelyDestroyActivities;
@@ -303,11 +303,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         }
         mAllPrefs.add(mClearAdbKeys);
         mAdbNotify = findAndInitSwitchPref(ADB_NOTIFY);
-        mEnableTerminal = findAndInitSwitchPref(ENABLE_TERMINAL);
-        if (!isPackageInstalled(getActivity(), TERMINAL_APP_PACKAGE)) {
-            debugDebuggingCategory.removePreference(mEnableTerminal);
-            mEnableTerminal = null;
-        }
 
         mKeepScreenOn = findAndInitSwitchPref(KEEP_SCREEN_ON);
         mBtHciSnoopLog = findAndInitSwitchPref(BT_HCI_SNOOP_LOG);
@@ -326,8 +321,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             disableForUser(mEnableAdb);
             disableForUser(mClearAdbKeys);
             disableForUser(mAdbNotify);
-            disableForUser(mEnableTerminal);
             disableForUser(mPassword);
+            disableForUser(mEnableTerminal);
         }
 
         mDebugAppPref = findPreference(DEBUG_APP_KEY);
@@ -370,6 +365,12 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mSimulateColorSpace = addListPreference(SIMULATE_COLOR_SPACE);
         mUseNuplayer = findAndInitSwitchPref(USE_NUPLAYER_KEY);
         mUSBAudio = findAndInitSwitchPref(USB_AUDIO_KEY);
+
+        mEnableTerminal = findAndInitSwitchPref(ENABLE_TERMINAL);
+        if (!isPackageInstalled(getActivity(), TERMINAL_APP_PACKAGE)) {
+            debugDebuggingCategory.removePreference(mEnableTerminal);
+            mEnableTerminal = null;
+        }
 
         mKillAppLongpressBack = findAndInitSwitchPref(KILL_APP_LONGPRESS_BACK);
 
@@ -574,11 +575,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 Settings.Global.ADB_ENABLED, 0) != 0);
         updateSwitchPref(mAdbNotify, Settings.Global.getInt(cr,
                 Settings.Global.ADB_NOTIFY, 1) != 0);
-        if (mEnableTerminal != null) {
-            updateSwitchPref(mEnableTerminal,
-                    context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
-                    == PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
-        }
         updateSwitchPref(mKeepScreenOn, Settings.Global.getInt(cr,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, 0) != 0);
         updateSwitchPref(mBtHciSnoopLog, Settings.Secure.getInt(cr,
@@ -609,6 +605,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         updateAnimationScaleOptions();
         updateOverlayDisplayDevicesOptions();
         updateOpenGLTracesOptions();
+        if (mEnableTerminal != null) {
+            updateSwitchPref(mEnableTerminal,
+                    context.getPackageManager().getApplicationEnabledSetting(TERMINAL_APP_PACKAGE)
+                    == PackageManager.COMPONENT_ENABLED_STATE_ENABLED);
+        }
         updateImmediatelyDestroyActivitiesOptions();
         updateAppProcessLimitOptions();
         updateShowAllANRsOptions();
@@ -1464,11 +1465,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             Settings.Global.putInt(getActivity().getContentResolver(),
                     Settings.Global.ADB_NOTIFY,
                     mAdbNotify.isChecked() ? 1 : 0);
-        } else if (preference == mEnableTerminal) {
-            final PackageManager pm = getActivity().getPackageManager();
-            pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
-                    mEnableTerminal.isChecked() ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                            : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, 0);
         } else if (preference == mKeepScreenOn) {
             Settings.Global.putInt(getActivity().getContentResolver(),
                     Settings.Global.STAY_ON_WHILE_PLUGGED_IN,
@@ -1532,6 +1528,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeUseNuplayerOptions();
         } else if (preference == mUSBAudio) {
             writeUSBAudioOptions();
+        } else if (preference == mEnableTerminal) {
+            final PackageManager pm = getActivity().getPackageManager();
+            pm.setApplicationEnabledSetting(TERMINAL_APP_PACKAGE,
+                    mEnableTerminal.isChecked() ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
+                            : PackageManager.COMPONENT_ENABLED_STATE_DEFAULT, 0);
         } else if (preference == mKillAppLongpressBack) {
             writeKillAppLongpressBackOptions();
         } else if (preference == mChamber) {

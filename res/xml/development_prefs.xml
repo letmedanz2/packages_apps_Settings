@@ -81,11 +81,6 @@
             android:dependency="enable_adb" />
 
         <SwitchPreference
-            android:key="enable_terminal"
-            android:title="@string/enable_terminal_title"
-            android:summary="@string/enable_terminal_summary" />
-
-        <SwitchPreference
             android:key="allow_mock_location"
             android:title="@string/allow_mock_location"
             android:summary="@string/allow_mock_location_summary"/>
@@ -305,11 +300,16 @@
             android:title="@string/debug_applications_category">
 
         <SwitchPreference
-         android:key="kill_app_longpress_back"
-         android:title="@string/kill_app_longpress_back"
-         android:summary="@string/kill_app_longpress_back_summary"/>
-	    
-      <SwitchPreference
+            android:key="kill_app_longpress_back"
+            android:title="@string/kill_app_longpress_back"
+            android:summary="@string/kill_app_longpress_back_summary"/>
+
+        <SwitchPreference
+            android:key="enable_terminal"
+            android:title="@string/enable_terminal_title"
+            android:summary="@string/enable_terminal_summary" />
+
+        <SwitchPreference
             android:key="immediately_destroy_activities"
             android:title="@string/immediately_destroy_activities"
             android:summary="@string/immediately_destroy_activities_summary"/>

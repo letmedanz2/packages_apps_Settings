@@ -104,4 +104,9 @@
     <string name="navigation_ring_title">Navigation ring targets</string>
     <string name="navigation_ring_message">Tap the edit icon to open the navigation ring for editing.\n\nSelect a target to configure its behavior.\n\nTap the check mark icon to save your changes, or restore to reset the settings to defaults.</string>
 
+    <!-- Title of checkbox setting that enables the terminal app. [CHAR LIMIT=32] -->
+    <string name="enable_terminal_title">Local terminal</string>
+    <!-- Summary of checkbox setting that enables the terminal app. [CHAR LIMIT=64] -->
+    <string name="enable_terminal_summary">Enable terminal app that offers local shell access</string>
+
 </resources>
