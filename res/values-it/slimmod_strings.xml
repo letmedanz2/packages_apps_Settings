@@ -118,4 +118,29 @@
     <!-- Summary of checkbox setting that enables the terminal app. [CHAR LIMIT=64] -->
     <string name="enable_terminal_summary">Attiva l\'app Terminale integrata nel sistema</string>
 
+    <string name="navigation_bar_buttons">Pulsanti e posizione</string>
+    <string name="navigation_bar_help_text">Per iniziare, tappa l\'icona di modifica per sbloccare la barra di navigazione e personalizzarla.\n\nQuindi tappa un\'icona per cambiarne il collegamento, o tieni premuto a lungo sull\'icona per cambiare la sua posizione.\n\nQuindi salva per confermare i cambiamenti.</string>
+    <string name="navigation_restore_button_text">Ripristina\npredefiniti</string>
+    <string name="navigation_edit_button_text">Modifica</string>
+    <string name="navigation_save_button_text">Salva</string>
+    <string name="navigation_bar_reset_message">Eliminare la configurazione attuale e resettarla a default?</string>
+    <string name="profile_reset_title">Resetta</string>
+
+    <string name="navigation_bar_arrow_keys_title">Cursori freccia durante la digitazione</string>
+    <string name="navigation_bar_arrow_keys_summary">Mostra i cursori sinistra e destra durante la digitazione. Sovrascrive l\'IME switcher.</string>
+
+    <string name="navigation_bar_buttons">Pulsanti e posizione</string>
+    <string name="navigation_bar_help_text">Per iniziare, tappa l\'icona di modifica per sbloccare la barra di navigazione e personalizzarla.\n\nQuindi tappa un\'icona per cambiarne il collegamento, o tieni premuto a lungo sull\'icona per cambiare la sua posizione.\n\nQuindi salva per confermare i cambiamenti.</string>
+    <string name="navigation_restore_button_text">Ripristina\npredefiniti</string>
+    <string name="navigation_edit_button_text">Modifica</string>
+    <string name="navigation_save_button_text">Salva</string>
+    <string name="navigation_bar_reset_message">Eliminare la configurazione attuale e resettarla a default?</string>
+    <string name="profile_reset_title">Resetta</string>
+
+    <string name="navigation_bar_arrow_keys_title">Cursori freccia durante la digitazione</string>
+    <string name="navigation_bar_arrow_keys_summary">Mostra i cursori sinistra e destra durante la digitazione. Sovrascrive l\'IME switcher.</string>
+
+    <string name="navigation_ring_title">Obiettivi anello</string>
+    <string name="navigation_ring_message">Tappa l\'icona di modifica per personalizzare gli obiettivi dell\'anello.\n\nSeleziona un obiettivo per configurarne il comportamento.\n\nQuindi salva per confermare i cambiamenti.</string>
+
 </resources>
