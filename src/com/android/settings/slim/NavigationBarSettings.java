@@ -18,7 +18,8 @@ OnPreferenceChangeListener {
 
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String KEY_CLEAR_ALL_RECENTS_NAVBAR_ENABLED = "clear_all_recents_navbar_enabled";
-
+    private static final String KEY_HARDWARE_KEYS = "hardwarekeys_settings";
+    
     private ListPreference mNavigationBarHeight;
     private SwitchPreference mClearAllRecentsNavbar;
 
@@ -41,9 +42,15 @@ OnPreferenceChangeListener {
 	mClearAllRecentsNavbar = (SwitchPreference) prefs.findPreference(KEY_CLEAR_ALL_RECENTS_NAVBAR_ENABLED);
         mClearAllRecentsNavbar.setChecked(Settings.System.getInt(resolver,
                     Settings.System.CLEAR_ALL_RECENTS_NAVBAR_ENABLED, 1) == 1);
-
+     
+       // Hide Hardware Keys menu if device doesn't have any
+        PreferenceScreen hardwareKeys = (PreferenceScreen) findPreference(KEY_HARDWARE_KEYS);
+        int deviceKeys = getResources().getInteger(
+                com.android.internal.R.integer.config_deviceHardwareKeys);
+        if (deviceKeys == 0 && hardwareKeys != null) {
+            getPreferenceScreen().removePreference(hardwareKeys);
+        }
     }
-
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mNavigationBarHeight) {
             int statusNavigationBarHeight = Integer.valueOf((String) objValue);
@@ -67,3 +74,5 @@ OnPreferenceChangeListener {
         return true;
     }
 }
+
+
