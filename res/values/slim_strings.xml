@@ -44,7 +44,8 @@
     <string name="adaway_title">AdAway</string> 
      <string name="lmt_title">LMT</string> 
      <string name="power_menu_title">Power Menu</string> 
-
+     <string name="twisted_qs_title">QuickSettings Extras</string>
+     
     <!-- Slim Shortcuts -->
     <string name="slim_shortcut_picker">Slim Actions</string>
 
@@ -772,7 +773,7 @@
     <string name="shortcut_action_torch">Torch</string>
     <string name="shortcut_action_voice_search">Voice search</string>
     <string name="shortcut_action_none">None</string>
-        <string name="power_menu_title">Global menu</string>
+        <string name="power_menu_title">Power Menu</string>
 
         <string name="qs_tile_slimaction">SlimAction</string>
    <string name="qs_slim_action_title">SlimActions</string>

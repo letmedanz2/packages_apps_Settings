@@ -31,7 +31,12 @@
  <PreferenceCategory
    android:key="status_bar"
    android:title="@string/status_bar_settings" >
-   
+
+       <PreferenceScreen
+        android:key="twisted_quick_settings"
+        android:fragment="com.android.settings.slim.twistedQsSettings"
+        android:title="@string/twisted_qs_title" />
+       
        <PreferenceScreen
             android:key="network_traffic_state"
             android:fragment="com.android.settings.chameleonos.NetworkTraffic"
@@ -159,7 +164,15 @@
 		android:targetPackage="org.adaway" />
 	</Preference>
 
-	<!-- LMT-->
+	
+  <!-- Circle app bar -->
+    <PreferenceScreen
+        android:key="app_circle_bar"
+        android:icon="@drawable/ic_twisted_side"
+        android:fragment="com.android.settings.liquid.AppCircleBar"
+        android:title="@string/app_circle_bar_title"/>
+    
+	<!-- LMT -->
 	<Preference
 		android:id="@+id/lmt_settings"
 		android:title="@string/lmt_title"
@@ -168,7 +181,7 @@
 		android:action="android.intent.action.MAIN"
 		android:targetClass="LMT"
 		android:targetPackage="com.android.lmt" />
-	</Preference>
+    </Preference> -->
 	
  <PreferenceScreen
         android:key="bitsyko_layers"
