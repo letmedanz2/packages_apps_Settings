@@ -52,10 +52,11 @@ import android.os.RemoteException;
 
 public class TwistedSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
-        
+/*
         private static final String KEY_BITSYKO_LAYERS = "bitsyko_layers";
         private static final String KEY_EQUALIZER_SETTINGS = "equalizer_settings";
-        private static final String KEY_LCD_DENSITY = "lcd_density";
+*/
+	private static final String KEY_LCD_DENSITY = "lcd_density";
 
     private static final String TAG = "DisplaySettings";
     private ListPreference mLcdDensityPreference;
@@ -90,7 +91,8 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
         }
         mLcdDensityPreference.setOnPreferenceChangeListener(this);
         updateLcdDensityPreferenceDescription(currentDensity);
-        
+ 
+ /*
 	    if (!isPackageInstalled("org.bitsyko.overlaymanager")) {
                 PreferenceScreen screen = getPreferenceScreen();
                 Preference pref = getPreferenceManager().findPreference(KEY_BITSYKO_LAYERS);
@@ -101,6 +103,7 @@ public class TwistedSettings extends SettingsPreferenceFragment implements
 	      Preference pref = getPreferenceManager().findPreference(KEY_EQUALIZER_SETTINGS);
 	      screen.removePreference(pref);
 	    }
+	    */
     }
 
     private void updateLcdDensityPreferenceDescription(int currentDensity) {

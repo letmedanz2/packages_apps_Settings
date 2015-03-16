@@ -107,7 +107,8 @@
 <PreferenceCategory
   android:key="extra"
   android:title="@string/extra_settings" >
- 
+
+  <!--
   <Preference
 		android:id="@+id/equalizer_settings"
 		android:key="equalizer_settings"
@@ -119,8 +120,8 @@
 		android:targetPackage="com.vipercn.viper4android_v2" />
 	</Preference>
 
-</PreferenceCategory>
-
+  -->
+  
   <Preference
 		android:id="@+id/bitsyko"
 		android:title="@string/bitsyko_layers_title"
@@ -163,7 +164,6 @@
 		android:targetClass="org.adaway.ui.BaseActivity"
 		android:targetPackage="org.adaway" />
 	</Preference>
-
 	
   <!-- Circle app bar -->
     <PreferenceScreen
@@ -172,7 +172,7 @@
         android:fragment="com.android.settings.liquid.AppCircleBar"
         android:title="@string/app_circle_bar_title"/>
     
-	<!-- LMT -->
+	<!-- LMT 
 	<Preference
 		android:id="@+id/lmt_settings"
 		android:title="@string/lmt_title"
@@ -181,8 +181,8 @@
 		android:action="android.intent.action.MAIN"
 		android:targetClass="LMT"
 		android:targetPackage="com.android.lmt" />
-    </Preference> -->
-	
+    </Preference> 
+
  <PreferenceScreen
         android:key="bitsyko_layers"
         android:id="@+id/bitsyko_layers"
@@ -192,5 +192,6 @@
             android:targetPackage="org.bitsyko.overlaymanager"
             android:targetClass="org.bitsyko.overlaymanager.main" />
     </PreferenceScreen>
-    
+   --> 
+    </PreferenceCategory>
 </PreferenceScreen>
